@@ -1,0 +1,9 @@
+body,
+html {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	min-width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	background: #fafafa;
+}

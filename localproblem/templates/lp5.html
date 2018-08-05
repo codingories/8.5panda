@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../static/css/main.css">
+<title>演示2</title>
+</head>
+<body style="overflow: hidden;">
+<!--帮助中心内容区-->
+<div class="helpcenterWild">
+	<div class="new100content">
+		<div class="helpcenter clearfloat">
+			<div class="helpcenter_Cleft">
+				<img src="../static/img/help_left.png">
+			</div>
+			<div class="helpcenter_Cright">
+				<img src="../static/img/help_right.png">
+			</div>
+			<div class="helpcenter_left">
+				<h2>局部问题:近</h2>
+				<div id="content_1" class="helpcenter_leftIn mCustomScrollbar _mCS_1">
+					<!-- 左侧列表 -->
+					<ul>
+						<li><a class="helpcenter_leftInOn">曲线展示</a></li>
+						<li><a>评价指标</a></li>
+					</ul>
+					<!-- 左侧列表end -->
+				</div>
+			</div>
+			<div class="helpcenter_right">
+			<!-- 帮助中心右侧 -->
+				<div class="helpcenter_rightIn">
+
+					<!--帮助中心1号信息-->
+					<div class="helpcenter_rightInIn displayblock">
+						<!-- 图文1 -->
+						<div class="helpcenter_rightIns helpcenter_rightInsOn">
+							<div class="helpcenter_rightInL">
+								<h2><span class="contenttitle">现状1</span><span class="helpcenter_span1"></h2>
+							</div>
+							<div id="container1"></div>
+						</div>
+						<!-- 图文2 -->
+						<div class="helpcenter_rightIns">
+							<div class="helpcenter_rightInL">
+								<h2><span class="contenttitle">现状2</span><span class="helpcenter_span1"></h2>
+							</div>
+							<div id="container2"></div>
+						</div>
+						<!-- 图文3 -->
+						<div class="helpcenter_rightIns">
+							<div class="helpcenter_rightInL">
+								<h2><span class="contenttitle">现状3</span><span class="helpcenter_span1"></h2>
+							</div>
+							<div id="container3"></div>
+						 </div>
+					</div>
+					
+					<!--帮助中心2-->
+					<div class="helpcenter_rightInIn">
+						<div class="helpcenter_rightIns helpcenter_rightInsOn">
+							<div class="helpcenter_rightInL">
+								<h2><span>评价指标1</span><span class="helpcenter_span1"></h2>
+							</div>
+							<div class="helpcenter_rightInR">
+							</div>
+						</div>
+						<div class="helpcenter_rightIns">
+							<div class="helpcenter_rightInL">
+								<h2><span>评价指标2</span><span class="helpcenter_span1"></h2>
+							</div>
+							<div class="helpcenter_rightInR">
+							</div>
+						</div>
+						<div class="helpcenter_rightIns">
+							<div class="helpcenter_rightInL">
+								<h2><span>评价指标3</span><span class="helpcenter_span1"></h2>
+							</div>
+							<div class="helpcenter_rightInR">
+							</div>
+						 </div>
+						 <div class="helpcenter_rightIns">
+							<div class="helpcenter_rightInL">
+								<h2><span>评价指标4</span><span class="helpcenter_span1"></h2>
+							</div>
+							<div class="helpcenter_rightInR">
+							</div>
+						 </div>
+					</div>
+					<!--over-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="helpcenter_bottom">
+		<a class="helpcenter_bBL"><img src="../static/img/help_bottomleft.png" alt="" /></a>
+		<a class="helpcenter_bB helpcenter_bBon">1</a><a class="helpcenter_bB">2</a><a class="helpcenter_bB">3</a>
+		<a class="helpcenter_bBR"><img src="../static/img/help_bottomright.png" alt="" /></a>
+	</div>
+
+</div>
+<!--帮助中心结束-->
+<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/highcharts.js"></script>
+<script type="text/javascript" src="../static/js/main.js"></script>
+<script language="JavaScript">
+	$(document).ready(function() {
+   var title = {
+      text: '城市平均气温'
+   };
+   var subtitle = {
+      text: 'Source: runoob.com'
+   };
+   var xAxis = {
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+   };
+   var yAxis = {
+      title: {
+         text: 'Temperature (\xB0C)'
+      },
+      plotLines: [{
+         value: 0,
+         width: 1,
+         color: '#808080'
+      }]
+   };
+
+   var tooltip = {
+      valueSuffix: '\xB0C'
+   }
+
+   var legend = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle',
+      borderWidth: 0
+   };
+
+   var series =  [
+      {
+         name: 'Tokyo',
+         data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2,
+            26.5, 23.3, 18.3, 13.9, 9.6]
+      },
+      {
+         name: 'New York',
+         data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8,
+            24.1, 20.1, 14.1, 8.6, 2.5]
+      },
+      {
+         name: 'London',
+         data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0,
+            16.6, 14.2, 10.3, 6.6, 4.8]
+      }
+   ];
+
+   var json = {};
+
+   json.title = title;
+   json.subtitle = subtitle;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;
+   json.tooltip = tooltip;
+   json.legend = legend;
+   json.series = series;
+
+   $('#container1').highcharts(json);
+});
+
+$(document).ready(function() {
+   var title = {
+      text: '城市平均气温'
+   };
+   var subtitle = {
+      text: 'Source: runoob.com'
+   };
+   var xAxis = {
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+   };
+   var yAxis = {
+      title: {
+         text: 'Temperature (\xB0C)'
+      },
+      plotLines: [{
+         value: 0,
+         width: 1,
+         color: '#808080'
+      }]
+   };
+
+   var tooltip = {
+      valueSuffix: '\xB0C'
+   }
+
+   var legend = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle',
+      borderWidth: 0
+   };
+
+   var series =  [
+      {
+         name: 'Tokyo',
+         data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2,
+            26.5, 23.3, 18.3, 13.9, 9.6]
+      },
+      {
+         name: 'New York',
+         data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8,
+            24.1, 20.1, 14.1, 8.6, 2.5]
+      },
+      {
+         name: 'London',
+         data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0,
+            16.6, 14.2, 10.3, 6.6, 4.8]
+      }
+   ];
+
+   var json = {};
+
+   json.title = title;
+   json.subtitle = subtitle;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;
+   json.tooltip = tooltip;
+   json.legend = legend;
+   json.series = series;
+   $('#container2').highcharts(json);
+});
+
+	$(document).ready(function() {
+   var title = {
+      text: '城市平均气温'
+   };
+   var subtitle = {
+      text: 'Source: runoob.com'
+   };
+   var xAxis = {
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+   };
+   var yAxis = {
+      title: {
+         text: 'Temperature (\xB0C)'
+      },
+      plotLines: [{
+         value: 0,
+         width: 1,
+         color: '#808080'
+      }]
+   };
+
+   var tooltip = {
+      valueSuffix: '\xB0C'
+   }
+
+   var legend = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle',
+      borderWidth: 0
+   };
+
+   var series =  [
+      {
+         name: 'Tokyo',
+         data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2,
+            26.5, 23.3, 18.3, 13.9, 9.6]
+      },
+      {
+         name: 'New York',
+         data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8,
+            24.1, 20.1, 14.1, 8.6, 2.5]
+      },
+      {
+         name: 'London',
+         data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0,
+            16.6, 14.2, 10.3, 6.6, 4.8]
+      }
+   ];
+
+   var json = {};
+
+   json.title = title;
+   json.subtitle = subtitle;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;
+   json.tooltip = tooltip;
+   json.legend = legend;
+   json.series = series;
+   $('#container3').highcharts(json);
+});
+</script>
+</body>
+</html>
